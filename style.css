@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('pexels-guillaume-meurice-1591447.jpg') no-repeat -200px -900px;
+    color: white;
+}
+
+.loc-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.location{
+    height: 30vh;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+
+.weather-info{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.degree-section{
+    height: 10vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.location h1{
+    text-transform: capitalize;
+    font-size: 50px;
+}
+
+.degree-section span{
+    font-size: 30px;
+}
+
+.degree-section h2{
+    font-size: 40px;
+}
+
+
+.top-center{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 30%;
+    right: 0;
+    margin-top: 10px;
+    height: 10vh;
+}
+
+.top-center .search-btn{
+    cursor: pointer;
+    margin-top: 15px;
+    height: 40px;
+
+}
+
+.form{
+    width: 50%;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    
+}
+
+.form input{
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.form label{
+    font-size: 20px;
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+/*user after psuedo class to add content after any element. Here 'content' attr is necessary to be defined*/
+.form label::after{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid rgb(113, 115, 224);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.search-name{
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.form input:focus + .label-name .search-name,
+.form input:valid + .label-name .search-name{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #5fa8d3;
+}
+
+.form input:focus + .label-name::after,
+.form input:focus + .label-name::after{
+    transform: translateX(0%);
+}
+
+.info-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 200px;
+}
+
+.info-flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.info-flex h3{
+    font-size: 30px;
+}
+
+.error{
+    color: red;
+}
+
+@media(max-width: 900px){
+    .info-section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 100px;
+    }
+
+    .info-flex h3{
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 490px){
+    .info-section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .info-flex h3{
+        font-size: 15px;
+    }
+}
