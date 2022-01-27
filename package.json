@@ -1,0 +1,24 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "weather.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adarsh272/Modified-Weather-App-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https/adarsh272.github.io/Modified-Weather-App-",
+  "bugs": {
+    "url": "https://github.com/adarsh272/Modified-Weather-App-/issues"
+  },
+  "homepage": "https://github.com/adarsh272/Modified-Weather-App-#readme",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
